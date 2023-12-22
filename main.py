@@ -7,7 +7,12 @@ comptes = {}
 clients = {}
 clientscomptes = {} # {numclient : numcompte} 
 
-   
+#csv
+with open("clients.csv", 'r') as file:
+    csvreader = csv.reader(file)
+
+    for row in csvreader:
+        clients[row[0]] = row[1]  
 
 
 #Les Fonctions :
